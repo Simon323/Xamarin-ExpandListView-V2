@@ -17,7 +17,7 @@ namespace ExpandListView2 {
 
     class MyPage : ContentPage {
 
-        Bing bing = new Bing();
+        //Bing bing = new Bing();
         Data data = new Data("");
         
         //現在、展開しているセルの行番号
@@ -52,12 +52,18 @@ namespace ExpandListView2 {
                 HorizontalOptions = LayoutOptions.FillAndExpand
             };
             var button = new Button { Text = "OK" };
-            button.Clicked += async (s, e) => {
-                var resultStr = await bing.Search(entry.Text);
-                data = new Data(resultStr);
-                listView.ItemsSource = data.ar;
+            //button.Clicked += async (s, e) => {
+            //    var resultStr = await bing.Search(entry.Text);
+            //    data = new Data(resultStr);
+            //    listView.ItemsSource = data.ar;
 
-            };
+            //};
+
+			button.Clicked += delegate
+			{
+				data = new Data("");
+				listView.ItemsSource = data.ar;
+			};
 
             var layout = new StackLayout {
                 Orientation = StackOrientation.Horizontal,
@@ -108,7 +114,7 @@ namespace ExpandListView2 {
             _title.FontSize = 20;
 
             var size = new Label { FontSize = 12 };
-            size.SetBinding(Label.TextProperty, "Size");
+            size.SetBinding(Label.TextProperty, "Height");
 
             var type = new Label { FontSize = 12 };
             type.SetBinding(Label.TextProperty, "ContentType");

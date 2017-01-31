@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{E5F866BB-55BA-45AF-BBF1-7B31729D3956}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ExpandListView2/ExpandListView2/Data.cs">
+    <Files>
+      <File FileName="ExpandListView2/ExpandListView2.iOS/Main.cs" Line="13" Column="38" />
+      <File FileName="ExpandListView2/ExpandListView2/App.cs" Line="131" Column="44" />
+      <File FileName="ExpandListView2/ExpandListView2/Bing.cs" Line="15" Column="30" />
+      <File FileName="ExpandListView2/ExpandListView2/Data.cs" Line="50" Column="105" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ExpandListView2.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.ExpandListView2.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.85759AEF-A5EF-405B-A378-73491F317AFB" />
+</Properties>

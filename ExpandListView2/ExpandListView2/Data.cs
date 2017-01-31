@@ -12,9 +12,9 @@ namespace ExpandListView2 {
         public readonly ObservableCollection<OneData> ar = new ObservableCollection<OneData>();
 
         public Data(string str) {
-            var feed = JsonConvert.DeserializeObject<ImageSearchObject>(str);
-            if(feed!= null) {
-                foreach (var r in feed.d.results) {
+            //var feed = JsonConvert.DeserializeObject<ImageSearchObject>(str);
+            //if(feed!= null) {
+			foreach (var r in GetMockData()) {
                     ar.Add(new OneData() {
                         Title = r.Title,
                         MediaUrl = r.MediaUrl,
@@ -25,13 +25,50 @@ namespace ExpandListView2 {
                         DisplayUrl = r.DisplayUrl,
                         ContentType = r.ContentType,
                     });
-                }
+               // }
             }
         }
 
         public static implicit operator Data(OneData v) {
             throw new NotImplementedException();
         }
+
+		public List<Result> GetMockData()
+		{
+			var result = new List<Result>();
+
+			result.Add(new Result
+			{
+				__metadata = new Metadata
+				{
+					uri = "",
+					type = ""
+				},
+				ID = "",
+				Title = "Dziala ?",
+				MediaUrl ="https://s-media-cache-ak0.pinimg.com/736x/8e/9d/3e/8e9d3e6b29f23a92e025c59d8ee28bf8.jpg",
+				SourceUrl = "https://s-media-cache-ak0.pinimg.com/736x/8e/9d/3e/8e9d3e6b29f23a92e025c59d8ee28bf8.jpg",
+				DisplayUrl = "https://s-media-cache-ak0.pinimg.com/736x/8e/9d/3e/8e9d3e6b29f23a92e025c59d8ee28bf8.jpg",
+				Width = "",
+				Height = "12",
+				FileSize = "",
+				ContentType = "Obrazek",
+				Thumbnail = new Thumbnail
+				{
+					__metadata = new TumbnailMetadata
+					{
+						type = ""
+					},
+					MediaUrl = "",
+					ContentType = "",
+					Width = "",
+					Height = "",
+					FileSize = "",
+				}
+			});
+
+			return result;
+		}
     }
 
     public class Metadata {
